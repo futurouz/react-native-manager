@@ -8,6 +8,9 @@ import reducers from './src/reducers';
 import Router from './src/Router';
 
 class App extends Component {
+
+
+
   componentWillMount() {
     var config = {
       apiKey: "AIzaSyCksTQBQkgUtlKQQaHh8Z9epiD7OlUMBS8",
@@ -20,7 +23,7 @@ class App extends Component {
     firebase.initializeApp(config);
   }
   render() {
-
+    console.ignoredYellowBox = ['Setting a timer'];
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
 
     return (
